@@ -41,7 +41,8 @@ form {
 
     border-radius: 8px;
 
-    max-width: 730px;
+    max-width: 1200px;
+    
 }
 
 form h1 {
@@ -66,7 +67,7 @@ form .field {
     display: flex;
     flex-direction: column;
 
-    margin-bottom: 24px;
+    margin-bottom: 18px;
 }
 
 form .field-group {
