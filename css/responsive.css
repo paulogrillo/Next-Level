@@ -29,8 +29,20 @@
         #page-search-results .cards {
             grid-template-columns: 1fr;
         }      
+
+        #page-home main h1 {
+            font-size: 36px;
         
-}        
+        }
+} 
+
+@media (max-width: 600px) {
+    #page-home main a strong {
+        font-size: 16px;
+    }
+}
+
+
 
 @media (min-width: 1700px) {
     #page-home {
