@@ -95,6 +95,7 @@ function handleSelectedItem(event) {
         selectedItems = filteredItems
 
     } else {
+        
     // Se não estiver selecionado
     // Adicionar à seleção
     selectedItems.push(itemId)
