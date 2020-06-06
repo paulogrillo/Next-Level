@@ -43,7 +43,7 @@ server.post("/savepoint", (req, res) =>{
 
     // Inserir dados no bando de dados
 
-    //console.log(req.body)
+    console.log(req.body)
     
     const query = `
     INSERT INTO places (
@@ -109,9 +109,10 @@ server.get("/search", (req, res) => {
         // mostrar a página html com os dados do banco
         return res.render("search-results.html", { places: rows, total})
     })
+
 })
 
 
 // ligar o servidor
-server.listen(3000)
+server.listen(process.env.PORT || 3333)
 

@@ -5,12 +5,14 @@
 
     background: url('../assets/fundo.svg') no-repeat;
     background-position: 35vw bottom;
+    
+    
 }
 
 
 #page-home .content {
     width: 90%;
-    max-width: 1010px;
+    max-width: 1120px;
     height: 100%;
 
     margin: 0 auto;
@@ -115,4 +117,11 @@
     flex: 1;
     text-align: center;
 }
+
+#page-home .background-image:hover {
+
+    opacity: 0.5;
+
+}
+ 
 

@@ -83,7 +83,7 @@
     width: 72px;
     height: 72px;
 
-    background-color: var(--primary-color);
+    background-color:  #682a808e;
 
     border: 0px;
 
@@ -93,7 +93,7 @@
 }
 
 #modal form button:hover{
-    background-color: var(--color-hover);
+    background-color: #682a80;
 }
 
 /* Isto é para o modal point created */

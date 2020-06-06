@@ -10,9 +10,9 @@ module.exports = db
     
     db.serialize(() => {
     
-    /*
-     // Criar uma tabela
-    db.run(`
+    
+    // Criar uma tabela
+   /*  db.run(`
         CREATE TABLE IF NOT EXISTS places (
             id INTEGER PRIMARY KEY AUTOINCREMENT
             image TEXT,
@@ -68,13 +68,14 @@ module.exports = db
         console.log("Aqui estão seus registros:")
         console.log(rows)
     })
-    
-    // Deletar um dado na tabela
-    db.run(`DELETE FROM places WHERE id = ?`, [7], function(err){
-        if(err) {
-            return console.log(err)
-        }
-            console.log("Registro deletado com sucesso!")
-   })
-   */
+     */
+
+    //Deletar um dado na tabela
+    // db.run(`DELETE FROM places WHERE id = ?`, [23], function(err){
+      //  if(err) {
+      //  return console.log(err)
+      // }
+     //   console.log("Registro deletado com sucesso!")
+  //}) 
+  
 })
