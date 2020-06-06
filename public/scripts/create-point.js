@@ -25,7 +25,7 @@ function getCities(event){
     
     const url = `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${ufValue}/municipios`
 
-    citySelect.innerHTML = "<option value>Selecione a Cidade</option>"
+    citySelect.innerHTML = "<option value>Selecione a cidade</option>"
     citySelect.disabled = true
 
 
@@ -50,6 +50,7 @@ document
 
 
 // Itens de coleta
+
 // Pega todos os Li's
 
 const itemsToCollect = document.querySelectorAll(".items-grid li")
@@ -70,8 +71,9 @@ function handleSelectedItem(event) {
     // Class List = Adicionar ou remover uma classe com javascript
     itemLi.classList.toggle("selected")
 
-    const itemId = event.target.dataset.id
+    const itemId = itemLi.dataset.id
 
+    console.log('ITEM ID:', itemId)
     
 
     // Verificar se existem itens seleciontados, se sim
@@ -85,6 +87,7 @@ function handleSelectedItem(event) {
     // Se já estiver selecionado, tirar da seleção
 
     if ( alreadySeletec >= 0 ) {
+        
         // Tirar da selecão
 
         const filteredItems = selectedItems.filter( item => {
@@ -101,6 +104,9 @@ function handleSelectedItem(event) {
     selectedItems.push(itemId)
 
     }
+
+
+    console.log('selectedItems:', selectedItems)
 
     // atualizar o campo escondido com os itens selecionados
     collectedItems.value = selectedItems

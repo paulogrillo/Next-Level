@@ -1,12 +1,15 @@
 
+
+
 body::after {
     content:"";
-    position: fixed;
+    position: absolute;
     background: white;
-    top: 260px;
+    top: 0;
     right: 0;
     left: 0;
     bottom: 0;
+    height: 16rem;
     z-index: -1;
 }
 
@@ -20,7 +23,7 @@ body::after {
 }
 
 #page-search-results header {
-    margin-top: 48px;
+    margin-top: 35px;
 
     display: flex;
     justify-content: space-between;
@@ -44,10 +47,21 @@ body::after {
     width: 20px;
     height: 24px;
 }
+main .cards .card:hover {
 
+    padding: 10px;
+    border-radius: 16px;
+    background-color: var(--color-hover);
+   
+}
 main {
-    margin: 48px;
 
+    margin: 10%;
+
+    padding-top: 100px;
+    padding-left: 10px;
+    justify-content: space-between;
+    justify-content: center;
 }
 
 main h4 {
@@ -59,27 +73,32 @@ main h4 {
 }
 
 main .cards {
+
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 
     gap: 24px;
+
 }
 
 
 main img {
-    width: 100%;
-    height: 150px;
 
-    object-fit: cover;
+    margin-left: 28px;
+    width: 200px;
+    height: 200px;
 
-    border-radius: 6px 6px 6px 6px;
+    border-radius: 50px 50px 50px 50px;
+
 
 }
 
+
 main .card h1 {
+
     margin: 32px;
 
-    font-size: 32px;
+    font-size: 24px;
     line-height: 41px;
     color: #322153;
 }
@@ -101,3 +120,4 @@ main .card p {
 
     color: #6c6c80;
 }
+

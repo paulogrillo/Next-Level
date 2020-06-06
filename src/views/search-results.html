@@ -19,38 +19,41 @@
     <!--Header-->
     {% include "partials/page-header.html" %}
 
-    <main>
+
+
+<main>
+
+{% if total > 0 %}
+       
         <h4>
-            <strong>2 pontos</strong>
+            <strong>{{total}} pontos</strong>
             encontrados
         </h4>
+       
+    <div class="cards">
 
-        <div class="cards">
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1503596476-1c12a8ba09a9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60" alt="Colectoria">
-                <h1>Colectoria</h1>
-                <h3>Resíduos Eletrônicos, Lâmpadas</h3>
-                <p>Rio do Sul, Santa Catarina<br>
-                    Guilherme Gemballa, Jardin América
+        {% for place in places %}
+
+         <div class="card">
+                <img src="{{ place.image }}" alt="{{ place.name }}">
+                <h1>{{ place.name }}</h1>
+                <h3>{{ place.items }}</h3>
+                <p>
+                    {{ place.city }}, {{ place.state }}
                     <br>
-                    Número 260
-                </p>
-
-            </div>
-
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1567393528677-d6adae7d4a0a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60" alt="Papersider">
-                <h1>Papersider</h1>
-                <h3>Papéis e Papelão</h3>
-                <p>Rio do Sul, Santa Catarina<br>
-                    Guilherme Gemballa, Jardin América
+                    {{ place.address }}
                     <br>
-                    Número 260
+                    {{ place.address2 }}
                 </p>
-
             </div>
-
-        </div>
-
-    </main>
+    
+        {% endfor %}
+            
+    </div>
+    
+    {%else%}
+        <h4><strong>Nenhum</strong> local encontrado</h4>
+    {% endif %}
+               
+</main>
 {% endblock content %}

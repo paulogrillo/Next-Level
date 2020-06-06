@@ -119,7 +119,7 @@ form button {
     height: 56px;
 
     background-color: var(--primary-color);
-    border-radius: 8px;
+    border-radius: 2px;
 
     color: white;
     font-weight: bold;
@@ -127,13 +127,16 @@ form button {
 
     border: 0;
 
+    border-radius: 16px;
+
     margin-top: 40px;
 
     transition: 400ms;
 }
 
 form button:hover{
-    background-color: #2fb86e;
+    background-color: var(--color-hover);
+    cursor: pointer;
 } 
 
 .items-grid {
@@ -161,9 +164,12 @@ form button:hover{
     
     text-align: center;
 
+
     cursor: pointer;
 
 }
+
+
 
 .items-grid li span {
     margin-top: 12px;
@@ -175,10 +181,20 @@ form button:hover{
     color: var(--title-color);
 }
 
+
+
 .items-grid li.selected {
+    background:  #34cb7880;
+    border: 2px solid #11532f98;
+    opacity: 0.5;
+}
+
+.items-grid li:hover {
     background: #e1faec;
     border: 2px solid #34cb79;
 }
+
+
 
 .items-grid li img,
 .items-grid li span {
